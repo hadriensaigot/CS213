@@ -1,0 +1,1 @@
+Brief description of the Space Ghost sheep game.
