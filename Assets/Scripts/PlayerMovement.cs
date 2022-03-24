@@ -8,7 +8,12 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        m_Movement.Set(horizontal, 0f, vertical);
+        m_Movement.Normalize();
+        transform.Translate(Time.deltaTime * m_Movement);
     }
 
     // Update is called once per frame
